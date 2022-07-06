@@ -1,7 +1,7 @@
 from pathlib import Path
 import pandas as pd
 from tkinter.filedialog import askopenfilename
-
+import datetime
 
 class MuseEEG:
     def __init__(self):
@@ -16,3 +16,7 @@ class MuseEEG:
 x = MuseEEG()
 x.read_data()
 print(x.data)
+data_top = x.data.head()
+print(data_top)
+t = x.data.dtypes
+print(t)
